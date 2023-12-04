@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;700&display=swap");
+
+.main {
+  padding: 0 100px;
+  font-family: "Mulish", sans-serif;
+  .titleCreateBook {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    .title {
+      color: #fefefe;
+      h1 {
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: 3px;
+        margin-bottom: 13px;
+        span {
+          color: #6200ee;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+    .createBook {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      input {
+        height: 48px;
+        padding: 14px 16px;
+        align-items: center;
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid #ebebeb;
+        background-color: #fefefe;
+        box-shadow: 0px 4px 18px 0px #3333330a;
+        font-size: 19;
+        color: #151515;
+        font-family: "Mulish", sans-serif;
+        font-weight: 400;
+      }
+      button {
+        margin-top: 14px;
+        padding: 0 24px;
+        span {
+          font-size: 20px;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  .books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 50px;
+    .book {
+      box-shadow: 0px 4px 24px 0px #3333332e;
+      // width: 400px;
+      padding: 32px;
+      background-color: #fefefe;
+      border-radius: 12px;
+      font-family: "Mulish", sans-serif;
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #151515;
+        margin-bottom: 6px;
+      }
+      p {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 16px;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        span {
+          color: #333;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .page {
+          color: #9654f4;
+          width: 83px;
+          height: 19px;
+          font-size: 12px;
+          border-radius: 8.5px;
+          background-color: #efe6fd;
+          text-align: center;
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+  .loader {
+    margin-top: 150px;
+    text-align: center;
+  }
+}
