@@ -4,6 +4,9 @@ import { useSignUpMutation } from "../store";
 import { useEffect } from "react";
 
 export const signUpLoader = async () => {
+  if (localStorage.getItem("key") && !localStorage.getItem("name")) {
+    return null;
+  }
   if (localStorage.getItem("key")) {
     return redirect("/");
   }

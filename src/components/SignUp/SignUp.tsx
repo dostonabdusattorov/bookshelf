@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { FC } from "react";
 import { Button } from "../Button";
 import { Error } from "../ErrorMessage";
+import { Link } from "react-router-dom";
 
 export type SignUpControllers = {
   name: string;
@@ -90,12 +91,17 @@ export const SignUp: FC<Props> = ({ loading, error, onSignUp }) => {
               {...register("secret", { required: true })}
             />
           </div>
-
           <Button type="submit" width="100%">
             {loading ? <CircularProgress color="primary" /> : "Submit"}
           </Button>
         </form>
         {error && <Error message={error} />}
+        <p>
+          Already signed up?{" "}
+          <Link style={{ textDecoration: "none" }} to={"/sign-in"}>
+            Go to sign in.
+          </Link>
+        </p>
       </div>
     </section>
   );

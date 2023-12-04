@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { FC } from "react";
 import { Button } from "../Button";
 import { Error } from "../ErrorMessage";
+import { Link } from "react-router-dom";
 
 export type SignInControllers = {
   email: string;
@@ -69,6 +70,13 @@ export const SignIn: FC<Props> = ({ error, onSignIn }) => {
             }}
           />
         )}
+
+        <p>
+          Not signed up?{" "}
+          <Link style={{ textDecoration: "none" }} to={"/sign-up"}>
+            Go to sign up.
+          </Link>
+        </p>
       </div>
     </section>
   );
